@@ -41,7 +41,7 @@ func initZapLogger(production bool) *zap.Logger {
 		zap.AddCallerSkip(1),
 	)
 	if err != nil {
-		log.Fatal("Can not create logger.go ", err)
+		log.Fatal("Can not create zap-logger!", err)
 	}
 	return zapLogger
 }

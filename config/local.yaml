@@ -1,3 +1,5 @@
 env: my-local
 logger:
   debug: true
+grpc:
+  port: 9090

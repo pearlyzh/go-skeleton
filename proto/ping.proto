@@ -1,0 +1,17 @@
+syntax = "proto3";
+package go_skeleton.v1;
+
+option go_package = "github.com/pearlyzh/go-skeletons/generated/grpc/go_skeleton";
+
+service PingPong {
+  rpc Ping(PingRequest) returns (PingResponse);
+}
+
+message PingRequest {
+  string name = 1;
+}
+
+message PingResponse {
+  string name = 1;
+  string request_id = 2;
+}
