@@ -22,7 +22,7 @@ type PingServer struct {
 	go_skeleton.UnimplementedPingPongServer
 }
 
-func (s *PingServer) Ping(ctx context.Context, request *go_skeleton.PingRequest) (*go_skeleton.PingResponse, error) {
+func (PingServer) Ping(ctx context.Context, request *go_skeleton.PingRequest) (*go_skeleton.PingResponse, error) {
 	logger.Ctx(ctx).Info("Ping request: ", zap.String("request", request.GetName()))
 	return &go_skeleton.PingResponse{
 		Name:      request.Name,

@@ -21,7 +21,7 @@ func loadConfigurations() {
 	viper.SetConfigFile(cp)
 	viper.AutomaticEnv()
 	if err := viper.ReadInConfig(); err != nil {
-		log.Fatal("Failed to load configuration file", err)
+		log.Fatal("Failed to load configuration file: ", err)
 	}
 	log.Printf("Use config %s\n", viper.ConfigFileUsed())
 }
