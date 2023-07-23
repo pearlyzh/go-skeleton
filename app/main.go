@@ -1,6 +1,8 @@
 package main
 
 import (
+	"go-skeleton/grpc"
+	"go-skeleton/repository"
 	"go-skeleton/utilityfx"
 	"go.uber.org/fx"
 	"log"
@@ -12,6 +14,6 @@ var version string
 
 func main() {
 	log.Println("Starting skeleton app - version " + version)
-	app := fx.New(utilityfx.Utility)
+	app := fx.New(utilityfx.Module, repository.Module, grpc.Module)
 	app.Run()
 }

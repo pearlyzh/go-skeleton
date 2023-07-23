@@ -3,3 +3,12 @@ logger:
   debug: true
 grpc:
   port: 9090
+mysql:
+  url: localhost:3306
+  username: root
+  password: abc@123
+  schema: go-skeleton
+  max-idle-connections: 12
+  max-open-connections: 24
+  max-idle-conn-time-in-millis: 600000
+  max-life-conn-time-in-millis: 1800000

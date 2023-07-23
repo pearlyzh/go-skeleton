@@ -1,0 +1,15 @@
+version: '2'
+services:
+  mysql:
+    container_name: pearly_mysql
+    restart: always
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: abc@123
+      MYSQL_USER: pearly
+      MYSQL_PASSWORD: pearlyzh
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - /Volumes/Data/Research/devops/mysql-docker-volume/data:/var/lib/mysql
+    ports:
+      - "3306:3306"

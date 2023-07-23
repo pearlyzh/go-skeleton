@@ -25,6 +25,6 @@ RUN GIT_COMMIT=$(git rev-list -1 HEAD) && \
 # https://docs.docker.com/engine/reference/builder/#expose
 
 # Run
-# this EXPOSE is just docs, not expose actually at all
+# this EXPOSE is just docs, not expose any at all
 EXPOSE 8080 9090
 ENTRYPOINT CONFIG_PATH=$CONFIG_PATH ./main

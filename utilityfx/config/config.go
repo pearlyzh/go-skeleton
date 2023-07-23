@@ -1,10 +1,11 @@
 package config
 
 import (
-	"github.com/spf13/viper"
-	"go.uber.org/fx"
 	"log"
 	"os"
+
+	"github.com/spf13/viper"
+	"go.uber.org/fx"
 )
 
 // for GIT revision: https://stackoverflow.com/questions/28459102/golang-compile-environment-variable-into-binary
@@ -16,7 +17,7 @@ func loadConfigurations() {
 	cp := os.Getenv("CONFIG_PATH")
 	if len(cp) == 0 {
 		log.Println("CONFIG_PATH is empty! Start using local config file!")
-		cp = "config/local.yaml"
+		cp = "./config/local.yaml"
 	}
 	viper.SetConfigFile(cp)
 	viper.AutomaticEnv()
