@@ -12,6 +12,15 @@ import (
 
 var version string
 
+/*
+TODO:
+ - Add Redis client
+ - Add Kafka client for Producers and Consumers
+ - Add Monitoring
+ - Add Tests
+ - Add Tracing
+ - Add RateLimiter
+*/
 func main() {
 	log.Println("Starting skeleton app - version " + version)
 	app := fx.New(utilityfx.Module, repository.Module, grpc.Module)
