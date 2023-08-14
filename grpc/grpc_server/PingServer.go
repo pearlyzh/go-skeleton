@@ -14,7 +14,7 @@ import (
 	"net"
 )
 
-var Module = fx.Invoke(StartGrpcServer)
+var Module = fx.Invoke(startGrpcServer)
 
 type PingServer struct {
 	go_skeleton.UnimplementedPingPongServer
@@ -25,7 +25,7 @@ func (server *PingServer) Ping(ctx context.Context, request *go_skeleton.PingReq
 	return server.pService.Ping(ctx, request)
 }
 
-func StartGrpcServer(lifecycle fx.Lifecycle, pService grpc_service.PingService) error {
+func startGrpcServer(lifecycle fx.Lifecycle, pService grpc_service.PingService) error {
 
 	port := viper.GetInt("grpc.port")
 	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", port))

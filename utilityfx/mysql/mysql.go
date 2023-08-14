@@ -14,9 +14,9 @@ import (
 	"time"
 )
 
-var Module = fx.Provide(NewMySQL)
+var Module = fx.Provide(newMySQL)
 
-func NewMySQL(lifecycle fx.Lifecycle) (*sqlx.DB, error) {
+func newMySQL(lifecycle fx.Lifecycle) (*sqlx.DB, error) {
 	mysql := "mysql"
 	username := viper.GetString(fmt.Sprintf("%s.username", mysql))
 	password := viper.GetString(fmt.Sprintf("%s.password", mysql))

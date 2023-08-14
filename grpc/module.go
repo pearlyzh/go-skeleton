@@ -6,4 +6,4 @@ import (
 	"go.uber.org/fx"
 )
 
-var Module = fx.Options(grpc_service.Module, grpc_server.Module)
+var Module = fx.Options(grpc_server.Module, grpc_service.Module)

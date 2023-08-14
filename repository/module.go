@@ -2,4 +2,4 @@ package repository
 
 import "go.uber.org/fx"
 
-var Module = fx.Provide(NewRequestRepository)
+var Module = fx.Provide(newRequestRepository)

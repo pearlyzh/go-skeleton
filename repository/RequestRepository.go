@@ -15,7 +15,7 @@ type requestRepoImpl struct {
 	db *sqlx.DB
 }
 
-func NewRequestRepository(db *sqlx.DB) RequestRepository {
+func newRequestRepository(db *sqlx.DB) RequestRepository {
 	return &requestRepoImpl{
 		db,
 	}
