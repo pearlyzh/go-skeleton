@@ -5,7 +5,7 @@ This reduces boilerplate codes and help you focus on your business logic.
 
 ### Install dependencies
 ```bash
-make
+make install
 ```
 
 ### Build image
